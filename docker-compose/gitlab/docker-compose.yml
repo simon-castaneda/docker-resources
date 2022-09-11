@@ -1,0 +1,11 @@
+version: '3'
+services:
+   gitlab:
+      container_name: gitlab
+      image: gitlab/gitlab-ce:14.5.4-ce.0
+      ports:
+         - "8085:80"
+      volumes:
+         - /home/simon/Escritorio/practica/gitlab/config:/etc/gitlab
+         - /home/simon/Escritorio/practica/gitlab/logs:/var/log/gitlab
+         - /home/simon/Escritorio/practica/gitlab/data:/var/opt/gitlab

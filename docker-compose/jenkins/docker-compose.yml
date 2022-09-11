@@ -1,0 +1,9 @@
+version: '3'
+services:
+   jenkins:
+      container_name: jenkins
+      image: jenkins/jenkins:slim-jdk8
+      ports:
+         - "8082:8080"
+      volumes:
+         - /home/simon/Escritorio/practica/jenkins:/var/jenkins_home
