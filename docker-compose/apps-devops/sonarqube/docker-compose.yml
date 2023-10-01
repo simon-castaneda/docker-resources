@@ -10,8 +10,8 @@ services:
       - POSTGRES_USER=sonar
       - POSTGRES_PASSWORD=sonar
     volumes:
-      - $PWD/postgresql:/var/lib/postgresql
-      - $PWD/postgresql_data:/var/lib/postgresql/data
+      - $VOLUMES/postgres/postgresql:/var/lib/postgresql
+      - $VOLUMES/postgres/postgresql_data:/var/lib/postgresql/data
 
   sonarqube:
     image: sonarqube
@@ -26,10 +26,10 @@ services:
       - SONARQUBE_JDBC_USERNAME=sonar
       - SONARQUBE_JDBC_PASSWORD=sonar
     volumes:
-      - $PWD/sonarqube_conf:/opt/sonarqube/conf
-      - $PWD/sonarqube_data:/opt/sonarqube/data
-      - $PWD/sonarqube_extensions:/opt/sonarqube/extensions
-      - $PWD/sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+      - $VOLUMES/sonarqube/sonarqube_conf:/opt/sonarqube/conf
+      - $VOLUMES/sonarqube/sonarqube_data:/opt/sonarqube/data
+      - $VOLUMES/sonarqube/sonarqube_extensions:/opt/sonarqube/extensions
+      - $VOLUMES/sonarqube/sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
 
 
 networks:

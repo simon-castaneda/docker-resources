@@ -5,9 +5,9 @@ services:
     image: mysql
   #   command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_ROOT_PASSWORD: contraseña
+      MYSQL_ROOT_PASSWORD: $PASSBD
     volumes:
-      - /home/simon/Escritorio/practica/databd:/var/lib/mysql
+      - $VOLUMES/databd:/var/lib/mysql
     ports:
       - "3306:3306"
         

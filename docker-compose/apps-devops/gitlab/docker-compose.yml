@@ -6,6 +6,6 @@ services:
       ports:
          - "8085:80"
       volumes:
-         - /home/simon/Escritorio/practica/gitlab/config:/etc/gitlab
-         - /home/simon/Escritorio/practica/gitlab/logs:/var/log/gitlab
-         - /home/simon/Escritorio/practica/gitlab/data:/var/opt/gitlab
+         - $VOLUMES/gitlab/config:/etc/gitlab
+         - $VOLUMES/gitlab/logs:/var/log/gitlab
+         - $VOLUMES/gitlab/data:/var/opt/gitlab
